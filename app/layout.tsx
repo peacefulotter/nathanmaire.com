@@ -29,8 +29,8 @@ export default function RootLayout({
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <SidebarProvider>
                     <Navbar />
-                    <main className='w-full'>
-                        <SidebarTrigger />
+                    <main className='w-full h-screen'>
+                        <SidebarTrigger className='absolute z-50  bg-background rounded-none p-4' />
                         {children}
                     </main>
                 </SidebarProvider>

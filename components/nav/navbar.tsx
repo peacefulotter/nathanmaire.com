@@ -127,11 +127,18 @@ const items = [
 export function Navbar() {
     return (
         <Sidebar>
-            <SidebarHeader />
-            <SidebarContent>
+            <SidebarHeader>
+                <div className='flex items-center gap-6'>
+                    <p className='bg-foreground rounded-md text-background font-bold font-geist-mono px-4 py-2'>
+                        NM
+                    </p>
+                    <p className='text-lg font-bold'>Welcome 👋</p>
+                </div>
+            </SidebarHeader>
+            <SidebarContent className='pl-4'>
                 <SidebarGroup>
                     <SidebarGroupContent>
-                        <SidebarMenu>
+                        <SidebarMenu className='gap-2'>
                             {items.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton asChild>
