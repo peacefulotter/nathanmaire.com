@@ -8,12 +8,11 @@ import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { Icons } from '../ui/icons'
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
+export function UserAuthForm({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
     async function onSubmit(event: React.SyntheticEvent) {
+        // TODO: use zod
         event.preventDefault()
         setIsLoading(true)
 
